@@ -1,0 +1,1 @@
+{"uuid":"e628e5f6-1e4f-41c0-adf9-0032d457d71a","name":"QAInterviewPractice","children":["d46b6542-fde3-42a6-9202-a1f9334cc60b"],"befores":[{"name":"openBrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1765264979477,"stop":1765264986409}],"afters":[],"start":1765264979416,"stop":1765264993106}
