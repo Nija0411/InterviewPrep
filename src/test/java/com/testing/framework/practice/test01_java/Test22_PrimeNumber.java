@@ -6,7 +6,7 @@ public class Test22_PrimeNumber {
 
         boolean isPrime = true;
         for (int i = 2; i < n / 2; i++) {
-            if (n % 2 == 0) {
+            if (n % i == 0) {
                 isPrime = false;
                 break;
             }
@@ -14,7 +14,7 @@ public class Test22_PrimeNumber {
         if (isPrime) {
             System.out.println("Prime");
         } else {
-            System.out.println("Not a Prime");
+            System.out.println("No");
         }
     }
 }

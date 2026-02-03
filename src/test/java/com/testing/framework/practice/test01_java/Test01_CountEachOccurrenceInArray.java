@@ -2,23 +2,22 @@ package com.testing.framework.practice.test01_java;
 
 public class Test01_CountEachOccurrenceInArray {
     public static void main(String[] args) {
-        int arr[] = {1, 2, 3, 4, 5, 2, 3, 4};
-        boolean counted[] = new boolean[arr.length];
+        int arr[] = {1, 2, 3, 4, 5, 4};
+
+        boolean visited[] = new boolean[arr.length];
 
         for (int i = 0; i < arr.length; i++) {
             int count = 1;
-            if (counted[i]) {
+            if (visited[i]) {
                 continue;
             }
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]) {
+                if (arr[j] == arr[i]) {
                     count++;
-                    counted[j] = true;
+                    visited[j] = true;
                 }
             }
             System.out.println(arr[i] + " --> " + count);
         }
     }
-
-
 }

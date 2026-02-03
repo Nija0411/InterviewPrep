@@ -13,7 +13,6 @@ public class Test18_RemoveDuplicatesFromArray {
         for (int num : arr) {
             set.add(num);
         }
-
         Integer[] array = set.toArray(new Integer[set.size()]);
         System.out.println(Arrays.toString(array));
     }

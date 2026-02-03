@@ -5,24 +5,26 @@ import java.util.Map;
 
 public class Test03_StringCountUsingMap {
     public static void main(String[] args) {
-        String str = "Automation";
+        String str = "Test Automation";
+
         str = str.toLowerCase().replaceAll("\\s", "");
 
-        Map<Character, Integer> result = new HashMap<>();
-        for (char ch : str.toCharArray()) {
-            if (result.containsKey(ch)) {
-                result.put(ch, result.get(ch) + 1);
+        Map<Character, Integer> mapArray = new HashMap<>();
+
+        for (Character ch : str.toCharArray()) {
+            if (mapArray.containsKey(ch)) {
+                mapArray.put(ch, mapArray.get(ch) + 1);
             } else {
-                result.put(ch, 1);
+                mapArray.put(ch, 1);
             }
         }
-        System.out.println(result);
+        System.out.println(mapArray);
 
-        System.out.println("Duplicate Elements");
-        for (Map.Entry<Character, Integer> entry : result.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : mapArray.entrySet()) {
             if (entry.getValue() > 1) {
                 System.out.println(entry.getKey() + " --> " + entry.getValue());
             }
         }
+
     }
 }

@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Test07_StringWordOccurrences {
     public static void main(String[] args) {
-        String str = "My name is Nikhita Jalapure and my interview is scheduled today";
+        String str = "My name is Nikhita Jalapure and my interview is shceduled today";
         str = str.toLowerCase();
 
         String[] s = str.split(" ");
@@ -20,7 +20,7 @@ public class Test07_StringWordOccurrences {
             }
         }
         System.out.println(result);
-        System.out.println("Duplicates");
+
         for (Map.Entry<String, Integer> entry : result.entrySet()) {
             if (entry.getValue() > 1) {
                 System.out.println(entry.getKey() + " --> " + entry.getValue());

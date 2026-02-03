@@ -4,25 +4,25 @@ import java.util.Arrays;
 
 public class Test11_StringAnagram {
     public static void main(String[] args) {
-        String s1 = "Night";
-        String s2 = "Thing";
+        String str1 = "Night";
+        String str2 = "Thing";
 
-        s1 = s1.toLowerCase();
-        s2 = s2.toLowerCase();
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
 
-        if (s1.length() != s2.length()) {
-            System.out.println("Not Anagram");
+        if(str1.length()!=str2.length()){
+            System.out.println("Not a Anagram");
         }
 
-        char ch1[] = s1.toCharArray();
-        char ch2[] = s2.toCharArray();
+        char[] ch1 = str1.toCharArray();
+        char[] ch2 = str2.toCharArray();
 
         Arrays.sort(ch1);
         Arrays.sort(ch2);
 
-        if (Arrays.equals(ch1, ch2)) {
+        if(Arrays.equals(ch1,ch2)){
             System.out.println("Anagram");
-        } else {
+        }else {
             System.out.println("No");
         }
     }

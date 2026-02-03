@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 
-public class TestScreenshot {
+public class Test15_TakeScreenshot {
     @Test
     public void testScreenshot() {
         WebDriver driver = new ChromeDriver();
