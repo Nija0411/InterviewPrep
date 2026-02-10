@@ -1,4 +1,4 @@
-package com.testing.framework.practice.test05_collectionFramework;
+package com.testing.framework.practice.test05_collectionFramework.test01ArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;

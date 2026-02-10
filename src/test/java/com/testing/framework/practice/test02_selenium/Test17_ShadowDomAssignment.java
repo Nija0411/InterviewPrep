@@ -1,6 +1,7 @@
 package com.testing.framework.practice.test02_selenium;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,27 +10,28 @@ import org.testng.annotations.Test;
 
 public class Test17_ShadowDomAssignment {
 
+    //https://www.youtube.com/watch?v=cN9pAD34sO8
+
     @Test
     public void shadowdomAssignment() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
 
         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://jatin99.github.io/ShadowDomAssignment/");
+        driver.get("https://letcode.in/shadow");
 
-        By inputTextBoxLocator = By.cssSelector("input#email");
-        WebElement inputBox = driver.findElement(inputTextBoxLocator);
-        inputBox.sendKeys("Hello");
+        /*normal element locator stratergy won't work with shadow elements
+        driver.findElement(By.id("fname")).sendKeys("User123"); */
 
-        By divHeaderLocator = By.cssSelector("div.header");
-        WebElement divHeader = driver.findElement(divHeaderLocator);
-        System.out.println(divHeader.getText());
+        //Step 1: Locate the shadow host
+        WebElement host = driver.findElement(By.id("open-shadow"));
 
-        By usernameLocator = By.cssSelector("input[name='username']");
-        WebElement userName = driver.findElement(usernameLocator);
-        userName.sendKeys("12345");
+        //Step 2: Access the shadow root using host
+        SearchContext shadowRoot = host.getShadowRoot();
 
-        WebElement combinedClassed = driver.findElement(By.cssSelector("div.main.header"));
-        System.out.println(combinedClassed.getText());
+        //Step 3: Locate the shadow element
+        //xpath won't support in shadow DOM, css selector is recommended
+        shadowRoot.findElement(By.cssSelector("#fname")).sendKeys("User123");
+
     }
 }

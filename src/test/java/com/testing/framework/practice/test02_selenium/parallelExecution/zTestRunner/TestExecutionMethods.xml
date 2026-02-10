@@ -1,0 +1,11 @@
+<suite name="Parallel Execution" parallel="methods" thread-count="3">
+    <test name="Parallel Tests">
+        <classes>
+            <class name="com.testing.framework.practice.test02_selenium.parallelExecution.methods.Test01"/>
+            <class name="com.testing.framework.practice.test02_selenium.parallelExecution.methods.Test02"/>
+        </classes>
+    </test>
+</suite>
+
+
+
