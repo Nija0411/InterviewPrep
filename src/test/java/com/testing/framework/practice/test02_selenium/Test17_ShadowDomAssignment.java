@@ -31,7 +31,9 @@ public class Test17_ShadowDomAssignment {
 
         //Step 3: Locate the shadow element
         //xpath won't support in shadow DOM, css selector is recommended
-        shadowRoot.findElement(By.cssSelector("#fname")).sendKeys("User123");
+        WebElement shadowElement = shadowRoot.findElement(By.cssSelector("#fname"));
+        shadowElement.sendKeys("User123");
+
 
     }
 }

@@ -20,13 +20,14 @@ public class Test10_PropertyReader {
     @Test
     @Description("Write a code to read data from property file")
     public void readData() throws IOException {
-        Properties properties = new Properties();
+
 
         String filePath = "\\src\\test\\java\\com\\testing\\framework\\practice\\test02_selenium\\data.properties";
         File file = new File(System.getProperty("user.dir") + filePath);
 
         FileInputStream fis = new FileInputStream(file);
 
+        Properties properties = new Properties();
         properties.load(fis);
 
         WebDriver driver = new ChromeDriver();

@@ -25,6 +25,7 @@ public class Test11_ExOfCtrlA {
 
         actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 
+
         //right click on specific element
         WebElement element = null;
         actions.contextClick(element).build().perform();
