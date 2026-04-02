@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class Test03_StringCountUsingMap {
     public static void main(String[] args) {
-        String str = "Test Automation";
+        String str = "" +
+                "" +
+                "Test Automation";
 
         str = str.toLowerCase().replaceAll("\\s", "");
 

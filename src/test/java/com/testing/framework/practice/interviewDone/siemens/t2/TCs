@@ -1,0 +1,16 @@
+What is the minimum number of test cases required to ensure that all possible questions and decision paths in the following flow are covered?
+
+BOT: “What type of ticket do you require, single or return?”
+IF the customer wants ‘return’
+
+BOT: “What rate, Standard or Cheap-day?”
+IF the customer replies ‘Cheap-day’
+Say: “That will be £11.20”
+ELSE
+Say: “That will be £19.50”
+ENDIF
+ELSE
+Say: “That will be £9.75”
+ENDIF
+
+3 cases

@@ -1,15 +1,13 @@
-package com.testing.framework.practice.test02_selenium;
+package com.testing.framework.practice.test01_java.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class A01_Practice {
-
+public class A06_DuplicateElementsUsingMap {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 2, 4, 5, 3};
 
-        Map<Integer, Integer> map = new HashMap<>();
-
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int num : arr) {
             if (map.containsKey(num)) {
                 map.put(num, map.get(num) + 1);
@@ -23,6 +21,6 @@ public class A01_Practice {
                 System.out.print(key + " ");
             }
         }
-    }
 
+    }
 }
