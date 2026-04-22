@@ -11,8 +11,8 @@ public class Test25_SwapStrings {
         System.out.println("b = " + b);
 
         // Swap without using third variable
-        a = a + b;
-        b = a.substring(0, a.length() - b.length());
+        a = a + b; //HelloWorld
+        b = a.substring(0, a.length() - b.length()); // (10-5) starting from 0 and ends before 5
         a = a.substring(b.length());
 
         System.out.println("After swap:");

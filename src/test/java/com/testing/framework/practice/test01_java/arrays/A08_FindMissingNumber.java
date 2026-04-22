@@ -11,8 +11,8 @@ public class A08_FindMissingNumber {
             sum += num;
         }
 
-        int expectedSum = (n*(n+1))/2;
-        int missingNumber = expectedSum-sum;
-        System.out.println(missingNumber);
+        int expectedSum = (n*(n+1))/2; //30/2 = 15
+        int missingNumber = expectedSum-sum; //15-11
+        System.out.println(missingNumber); //4
     }
 }
