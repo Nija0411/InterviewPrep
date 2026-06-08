@@ -1,0 +1,3 @@
+Xpath for regular-growth value
+
+//div[@class="fund"]//section[@data-id="188b023"]//*[contains(text(),'Regular – Growth')]/parent::div/following-sibling::div//div[contains(@class,'elementor-widget-container')]

@@ -1,0 +1,13 @@
+Write a Selenium WebDriver script using the findElements() method to locate all buttons and hyperlinks present on a webpage containing the following elements:
+
+Reset button
+Save button
+Login button
+Forgot hyperlink
+
+Your script should:
+
+Use findElements() to identify all buttons and links.
+Search specifically for the Login button/link.
+Click the Login element if it is available.
+Handle the scenario where the Login element is not present and print an appropriate message.
