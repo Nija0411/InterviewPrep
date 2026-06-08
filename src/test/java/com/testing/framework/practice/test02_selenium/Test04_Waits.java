@@ -25,7 +25,7 @@ public class Test04_Waits {
 
         //Explicit Wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("id")));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("id")));
 
         //Fluent Wait
         Wait<WebDriver> fluentWait = new FluentWait<>(driver)
@@ -33,7 +33,7 @@ public class Test04_Waits {
                 .pollingEvery(Duration.ofSeconds(2))
                 .ignoring(NoSuchElementException.class);
 
-        WebElement element = fluentWait.until(ExpectedConditions.elementToBeClickable(By.id("id")));
+        WebElement element1 = fluentWait.until(ExpectedConditions.elementToBeClickable(By.id("id")));
 
     }
 }

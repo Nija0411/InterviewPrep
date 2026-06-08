@@ -18,13 +18,14 @@ public class Test02_TakeScreenShot {
         driver.manage().window().maximize();
         driver.get("https://www.flipkart.com/");
 
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
 
         String folder = System.getProperty("user.dir") + "\\Screenshots";
         new File(folder).mkdir();
 
         String destination = folder + "\\FlipkartHomePage.png";
 
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             FileHandler.copy(screenshot, new File(destination));
         } catch (IOException e) {

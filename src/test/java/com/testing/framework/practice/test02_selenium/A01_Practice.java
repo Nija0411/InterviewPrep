@@ -1,25 +1,38 @@
 package com.testing.framework.practice.test02_selenium;
 
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class A01_Practice {
-    public static void main(String[] args) {
-        String input = "Java Test";
 
-        String[] arr = input.split(" ");
+    @Test
+    public void testProperties() throws IOException {
+        String filePath = "\\src\\test\\java\\com\\testing\\framework\\practice\\test02_selenium\\data.properties";
 
-        String reverse = "";
-        for (String word : arr) {
-            for (int i = word.length() - 1; i >= 0; i--) {
-                reverse += word.charAt(i);
-            }
-            reverse += " ";
+        File file = new File(System.getProperty("user.dir") + filePath);
 
-        }
-        System.out.println(reverse);
+        FileInputStream fis = new FileInputStream(file);
 
+        Properties properties = new Properties();
+        properties.load(fis);
 
+        WebDriver driver = new ChromeDriver();
+        driver.get(properties.getProperty("url"));
     }
+
+
 }
+
+
+
 
 
 

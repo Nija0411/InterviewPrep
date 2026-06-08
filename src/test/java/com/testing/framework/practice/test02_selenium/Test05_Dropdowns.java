@@ -15,10 +15,16 @@ public class Test05_Dropdowns {
         driver.manage().window().maximize();
         driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/#google_vignette");
 
+        //If multiple dropdowns present on UI, go with id, xpath lacators
         WebElement dropdown = driver.findElement(By.tagName("select"));
 
         Select select = new Select(dropdown);
         select.selectByValue("ALA");
+
+        select.selectByValue("Value");
+        select.selectByIndex(1);
+        select.selectByVisibleText("");
+
 
         driver.quit();
     }
