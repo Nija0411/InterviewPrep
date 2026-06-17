@@ -1,0 +1,38 @@
+To re-run failed test cases in Selenium (Java) using TestNG, there are multiple commonly used approaches.
+1. Manual Run
+2. Using Retry Logic
+
+Manual Run:
+Using TestNG testng-failed.xml (Easiest Way)
+After a TestNG run: TestNG automatically generates a file:
+test-output/testng-failed.xml
+
+👉 Steps:
+Run your test suite
+Navigate to: test-output → testng-failed.xml
+Right-click and run this file as TestNG suite
+
+Using IRetryAnalyzer (Retry Automatically)
+1. Create Retry Analyzer class
+2. Add Retry in Test Method
+3. Apply Retry to All Tests Using Listener
+
+TestNG documentation:
+https://testng.org/#_rerunning_failed_tests
+
+IRetryAnalyzer:
+TestNG interface used to control whether a failed test should be re-executed or not.
+boolean retry(ITestResult result): This method is called automatically by TestNG whenever a test fails
+                                   You return:
+                                   true → 🔁 rerun the test
+                                   false → ❌ do not rerun
+ITestResult:  is an interface that contains information about the test result
+It gives details like:
+Test name
+Status (PASS / FAIL / SKIP)
+Exception
+Execution time
+Class name
+
+IAnnotationTransformer: Dynamically attach retry logic to ALL test methods automatically
+Reduces : @Test(retryAnalyzer = MyRetry.class) annotation to all the test methods

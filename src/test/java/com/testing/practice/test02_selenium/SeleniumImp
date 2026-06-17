@@ -1,0 +1,7 @@
+1. Tcs are running for 2hr how you will reduce execution time?
+---->
+1. Reduce static waits and replace them with explicit waits
+2. Run tests in parallel
+3. Reduce UI dependency, Move heavy flows to API tests
+4. Remove duplicate tests
+5. Use headless mode

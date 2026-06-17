@@ -1,0 +1,19 @@
+Scenario: Dependent Dropdown Validation
+You are given a webpage with two dropdowns:
+1. Country dropdown
+2. State dropdown (depends on selected country)
+When a user selects a country, the state dropdown updates dynamically.
+
+Task:
+1. Retrieve all countries from the country dropdown
+For each country:
+Select the country
+
+2. Wait for state dropdown to update
+Fetch all states
+
+3. Store results in a Map: Country → List of States
+Print the map
+
+4. (Optional) Validate:
+Each country has at least 1 state, No blank values

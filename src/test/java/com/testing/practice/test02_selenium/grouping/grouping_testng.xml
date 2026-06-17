@@ -1,0 +1,13 @@
+<suite name="Test Group TCs">
+    <test name="Test smoke TCs">
+        <groups>
+            <run>
+                <inclue name="smoke"/>
+                <exclude name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testing.practice.test02_selenium.grouping.Test"/>
+        </classes>
+    </test>
+</suite>
